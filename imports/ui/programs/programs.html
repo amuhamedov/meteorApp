@@ -1,0 +1,36 @@
+<template name="programs">
+  <div class="jumbotron">
+    <center><h2>Жилищные комплексы</h2></center>
+    <div class="btn-group">
+      <a href="/programs/create"  class="btn btn-success" >Добавить запись</a>
+    </div>
+    
+    <div class = "welcome">
+
+      <table class="table table-hover table-bordered">
+<thead>
+  <tr>
+    <th>#</th>
+    <th>Наименование</th>
+    <th>Год постройки</th>
+    <th>Застройщик</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  {{#each item in buildingsData}}
+  <tr>
+    <td>{{item._id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.year}}</td>
+    <td>{{item.builder}}</td>
+    <td>  <a href="/programs/edit/{{item._id}}"  class="btn btn-xs"><span class="sub_icon glyphicon glyphicon-pencil"></span></a>
+       <a href="/programs/delete/{{item._id}}"  class="btn btn-xs"><span  class="sub_icon glyphicon glyphicon-trash"></span></a>
+    </td>
+  </tr>
+{{/each}}
+</tbody>
+</table>
+    </div>
+</div>
+</template>

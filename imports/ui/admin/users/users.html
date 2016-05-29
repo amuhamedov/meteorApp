@@ -1,0 +1,87 @@
+<template name="users">
+  <div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Модуль админки.</strong> Модуль доступен только для администраторов системы.
+  </div>
+  {{#if isInRole 'admin'}}
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h4 class="box-title">&nbsp;&nbsp;&nbsp;&nbsp;Новый Пользователь</h4>
+          </div>
+          <form role="form">
+            <div class="box-body">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="form-group">
+
+                      <label>Логин</label>
+                      <input class="form-control" id="userLogin"/>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Пароль</label>
+                        <input class="form-control" id="userPwd" type="password"/>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="form-group">
+                      <label>Почта</label>
+                      <input class="form-control" id="userEmail"/>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="form-group">
+                      <label>Роль</label>
+                      <select class="form-control" id="userRole">
+                        <option value="admin">Администратор</option>
+                        <option value="default">Обычный юзер</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+          </form>
+          <div class="box-footer">
+            <div class="row">
+              <div class="col-xs-6">
+                <a class="btn btn-success btn-md btn-block" id="addUser">Добавить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <table class="table table-bordered table-hover ">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Логин</th>
+          <th>e-mail</th>
+          <th>Роль</th>
+        </tr>
+      </thead>
+      <tbody>
+          {{#each  usersData}}
+          <tr>
+            <td>{{lName}}</td>
+            <td>{{id}}</td>
+            <td>{{email}}</td>
+            <td>{{role}}</td>
+          </tr>
+          {{/each}}
+
+      </tbody>
+    </table>
+  </div>
+  {{/if}}
+
+</template>

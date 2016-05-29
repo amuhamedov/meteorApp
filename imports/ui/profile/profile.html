@@ -1,0 +1,53 @@
+<template name="profile">
+	<div class="container">
+	      <div class="row">
+	      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+				 		<p class=" text-info">{{currentDate}} </p>
+	      </div>
+
+	          <div class="panel panel-info">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">{{displayName}}</h3>
+	            </div>
+	            <div class="panel-body">
+	              <div class="row">
+	                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="{{c.url imgPublicId}}" class="img-circle img-responsive"> </div>
+								
+	                <div class=" col-md-9 col-lg-9 ">
+	                  <table class="table table-user-information">
+	                    <tbody>
+	                      <tr>
+	                        <td>Role:</td>
+	                        <td>{{role}}</td>
+	                      </tr>
+	                      <tr>
+	                        <td>Login:</td>
+	                        <td>{{name}}</td>
+	                      </tr>
+	                      <tr>
+	                        <td>Email</td>
+	                        <td><a href="#">{{email}}</a></td>
+	                      </tr>
+
+	                    </tbody>
+	                  </table>
+
+	                  <a href="#" class="btn btn-primary">My Sales Performance</a>
+	                  <a href="#" class="btn btn-primary">Team Sales Performance</a>
+	                </div>
+	              </div>
+	            </div>
+								<input type="file" style="visibility:hidden;" id="inputFile">
+	                 <div class="panel-footer">
+	                        <a data-original-title="Change avatar" id = "clickChange" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+													<span class="pull-right">
+	                            <a href="#" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+	                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+	                        </span>
+	                    </div>
+
+	          </div>
+	      </div>
+	    </div>
+
+</template>

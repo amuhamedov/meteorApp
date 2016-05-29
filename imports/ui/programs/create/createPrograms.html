@@ -1,0 +1,42 @@
+<template name="createProgram">
+  <form class="form-horizontal">
+  <fieldset>
+    <legend>Создание</legend>
+    <div class="form-group">
+      <label for="inputName" class="col-lg-2 control-label">Наименование</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputName" placeholder="Наименование" type="text" value="{{item.name}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputBuilder" class="col-lg-2 control-label">Застройщик</label>
+      <div class="col-lg-10">
+        <input class="form-control" id="inputBuilder" placeholder="Застройщик" type="text" value="{{item.builder}}">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Год постройки</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="year">
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+</template>

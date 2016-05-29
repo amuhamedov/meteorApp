@@ -1,0 +1,86 @@
+@media (min-width: 980px) {
+  /* wide devices - full navbar */
+
+  /* push down content under fixed navbar */
+  body {
+
+    padding-bottom:40px;
+    }
+
+}
+.myLink {
+  width:20 px;
+}
+
+.table-bordered tr{
+		background: #b8d1f3;
+	}
+
+.welcome{
+  text-align: center;
+}
+
+.navbar-nav {
+    padding-left: 87%;
+    margin: 0;
+}
+
+/**
+ * front-and-center signin form
+ */
+.signin {
+  width:100%;
+  text-align:center;
+}
+.signin .login-form {
+  width:400px;
+  margin: 0 auto;
+  padding-left: 0%;
+  position:relative;
+  text-align:left;
+}
+
+.signin .accounts-dialog{
+  width:450px;
+}
+
+.signin .login-form {
+}
+.signin .login-close-text {
+  display:none;
+}
+.signin #login-buttons {
+}
+
+.signin .example-users {
+  width:350px;
+  margin: 0 auto;
+  position:relative;
+  text-align:left;
+  top:15em;
+  left:3em;
+}
+
+/**
+ * header
+ */
+#err .close {
+  float:none;
+  margin-left:1em;
+}
+
+/**
+ * note of the day
+ */
+.note {
+  margin:1em 0em;
+  padding:1em;
+  border:1px solid #ccc;
+}
+
+/**
+ * security-note
+ */
+.security-note {
+  margin-top:10em;
+}
